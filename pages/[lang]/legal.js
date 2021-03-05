@@ -2,7 +2,7 @@ import React from 'react'
 import Head from "next/head"
 import { useTranslation } from 'react-i18next'
 
-import Legal from 'components/legal'
+import Legal from 'components/legalInfo'
 import Footer from 'components/footer'
 
 const LegalPage = () => {
