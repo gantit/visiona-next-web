@@ -7,7 +7,6 @@ import {
 } from 'semantic-ui-react'
 import { Trans } from 'react-i18next'
 
-import officeUser from '../../assets/img/photos/officerUser.png'
 
 const Especialist = () => (
   <Segment style={{ padding: '8em 0em' }} vertical className="Especialist">
@@ -30,9 +29,6 @@ const Especialist = () => (
               Mantén el control de tu oficina, estés donde estés.
             </p>
             <p style={{ fontSize: '1.33em' }}>
-              Supervisa a tus trabajadores
-            </p>
-            <p style={{ fontSize: '1.33em' }}>
               Gracias a nuestro sistema de videovigilancia puedes saber lo que ocurre en las instalaciones de tu negocio,
               sin importar dónde te encuentres. Es especialmente útil si hay zonas de acceso restringido,
               ya que gracias a la funcionalidad de activación por movimiento podrás saber si alguien ha entrado en ella.
@@ -41,7 +37,7 @@ const Especialist = () => (
           </Trans>
         </Grid.Column>
         <Grid.Column width={8}>
-          <Image bordered rounded size="massive" src={officeUser} />
+          <Image bordered rounded size="massive" src='/img/photos/officerUser.png' />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>

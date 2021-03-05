@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react';
 import load from 'load-script';
-import cameraLeft from '../../assets/img/photos/cameraL.png';
 
 
 let classifier;
 function Ml5() {
   const [result, setResult] = useState({ name: 'robin, American robin, Turdus migratorius', confidence: '99.99' });
-  const [img, setImg] = useState(cameraLeft);
+  const [img, setImg] = useState('/img/photos/cameraL.png');
   const [ready, setReady] = useState(!!(window.ml5 && classifier));
 
   if (!window.ml5) {

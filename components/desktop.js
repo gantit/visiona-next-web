@@ -31,11 +31,10 @@ const DesktopContainer = ({ children }) => {
           inverted
           textAlign="center"
           style={{
-            minHeight: funnel?.height || 500, padding: '1em 0em 2em', backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${funnel?.url || "./img/photos/funnel.png"})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'left top'
+            minHeight: funnel?.height || 500, padding: '1em 0em 2em', backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${funnel?.url || "/img/photos/visionaCat_bg1.jpg"})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'left top'
           }}
           vertical
         >
-          <Image src={funnel?.url || "./img/photos/funnel.png"} fluid />
           <Menu
             fixed={hideFixedMenu ? 'top' : null}
             inverted={!hideFixedMenu}

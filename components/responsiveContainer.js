@@ -5,7 +5,8 @@ import {
   Message,
   Button,
   Sidebar,
-  Icon
+  Icon,
+  TransitionablePortal
 } from 'semantic-ui-react'
 import { useCookies } from 'react-cookie'
 import { useTranslation } from 'react-i18next'
@@ -17,9 +18,13 @@ const styles = {
   container: {
     position: 'fixed',
     bottom: 0,
-    zIindex: 1,
     width: '100%',
-    margin: 0
+    margin: 0,
+    padding: "30px",
+  },
+  textCookie: {
+    margin: "20px 0",
+    lineHeight: "1.8em"
   },
   btn: { padding: '4px', marginLeft: '10px' }
 }
@@ -56,7 +61,7 @@ const ResponsiveContainer = ({ children, pathname = "" }) => {
 
   const CookiesComponen = () => (
     <>
-      <p>
+      <p style={styles.textCookie}>
         {t('Utilizamos cookies, propias y de terceros, para optimizar su visita y mejorar nuestros servicios mediante la personalización denuestros contenidos y publicidad en base al análisis de su navegación. Si pulsa el botón “aceptar cookies” autoriza la instalación de cookies de análisis, publicitarias y de seguimiento para todos estos fines. Puede rechazar las cookies en configuración o puede obtener más información sobre qué cookies usamos en nuestra')}
         {pathname !== '/cookies'
           ? (
@@ -64,9 +69,9 @@ const ResponsiveContainer = ({ children, pathname = "" }) => {
               <Button as='a' basic color="blue" style={styles.btn}>{t('Política de cookies')}</Button>
             </Link>
           )
-          : ' Política de cookies'}
+          : ` ${t('Política de cookies')}`}
       </p>
-      <Button color="green" content={t('Aceptar y continuar')} icon="right arrow" labelPosition="right" onClick={() => acceptConsent(true)} />
+      <Button color="green" content={t('Aceptar y continuar')} icon="right arrow" labelPosition="right" onClick={acceptConsent} />
       <Button basic color="red" content={t('Cerrar')} labelPosition="right" icon="cancel" onClick={() => setConsent(true)} />
     </>
   )
@@ -80,17 +85,16 @@ const ResponsiveContainer = ({ children, pathname = "" }) => {
           <Mobile>{children}</Mobile>
         </Sidebar.Pushable>
       </Media>
-      {!showConsent && (
+      <TransitionablePortal open={!showConsent}>
         <Message
           success
           visible={showConsent}
           style={styles.container}
         >
-
           <Message.Header> <Icon name='exclamation' /> Política de Cookies</Message.Header>
           <CookiesComponen />
         </Message>
-      )}
+      </TransitionablePortal>
     </MediaContextProvider>
   )
 }

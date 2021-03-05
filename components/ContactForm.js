@@ -8,9 +8,9 @@ import {
 } from 'semantic-ui-react'
 import { useCookies } from 'react-cookie'
 import { useTranslation, Trans } from 'react-i18next'
-import contactanos from '../../assets/img/photos/contactanos.png'
 
-const API_URL = window.location.hostname !== 'localhost' ? 'https://api.visiona.cat' : 'http://localhost:1337'
+
+const API_URL = 'https://api.visiona.cat'
 
 const sendForm = async (data) => {
   const url = `${API_URL}/api/contacts/`
@@ -163,7 +163,7 @@ const ContactForm = () => {
             {errorSend && <Message negative>{t('Ha ocurrido un error al Enviar.')}</Message>}
           </Grid.Column>
           <Grid.Column>
-            <Image size="huge" src={contactanos} />
+            <Image size="huge" src='/img/photos/contactanos.png' />
           </Grid.Column>
         </Grid.Row>
       </Grid>

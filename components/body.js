@@ -34,21 +34,21 @@ const BodySection = () => {
           <Header as="h3" style={{ fontSize: '3em', textAlign: 'center', margin: '0 auto' }}>{t('Soluciones que se adaptan a cualquier situación')}</Header>
         </Grid.Row>
         <Grid.Row columns="equal">
-          <Grid.Column style={{ ...styles.container, backgroundImage: `url(./img/photos/office.jpg)` }} onClick={() => console.log('Click1')}>
+          <Grid.Column style={{ ...styles.container, backgroundImage: `url(/img/photos/office.jpg)` }} onClick={() => console.log('Click1')}>
             <Item.Group>
               <Item>
                 <Header as="p" style={styles.title}>{t('Seguridad para tu oficina')}</Header>
               </Item>
             </Item.Group>
           </Grid.Column>
-          <Grid.Column style={{ ...styles.container, backgroundImage: `url(./img/photos/empresa.jpg)` }} onClick={() => console.log('Click2')}>
+          <Grid.Column style={{ ...styles.container, backgroundImage: `url(/img/photos/empresa.jpg)` }} onClick={() => console.log('Click2')}>
             <Item.Group>
               <Item>
                 <Header as="p" href="#" style={styles.title}>{t('Vigila tu empresa o negocio')}</Header>
               </Item>
             </Item.Group>
           </Grid.Column>
-          <Grid.Column style={{ ...styles.container, backgroundImage: `url(./img/photos/industry.jpg)` }} onClick={() => console.log('Click3')}>
+          <Grid.Column style={{ ...styles.container, backgroundImage: `url(/img/photos/industry.jpg)` }} onClick={() => console.log('Click3')}>
             <Item.Group>
               <Item>
                 <Header as="p" style={styles.title}>{t('Controla y Graba en Naves Industriales')}</Header>

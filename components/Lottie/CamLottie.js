@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Lottie from './Lottie'
+import Lottie from './lottie'
 import animationData from './cam.json'
 
 const CamLottie = ({ animate, children }) => {

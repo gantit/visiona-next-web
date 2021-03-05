@@ -2,13 +2,13 @@ import Head from "next/head"
 
 import BodySection from 'components/body'
 import LopdSection from 'components/lopd'
-// import HowWork from 'components/containers/HowWork'
-// import ContactForm from 'components/containers/ContactForm'
-// import OurServices from 'components/containers/OurServices'
-// import Especialist from 'components/containers/Especialist'
-// import Productivity from 'components/containers/Productivity'
-// import Footer from 'components/containers/Footer'
-// import Details from 'components/containers/Details'
+import HowWork from 'components/howWork'
+import OurServices from 'components/ourServices'
+import Especialist from 'components/especialist'
+import ContactForm from 'components/contactForm'
+import Productivity from 'components/productivity'
+import Details from 'components/details'
+import Footer from 'components/footer'
 
 
 
@@ -34,14 +34,14 @@ const HomePage = () => (
     <Title />
     <BodySection />
     <LopdSection />
+    <HowWork />
+    <OurServices />
+    <Especialist />
+    <Productivity />
+    <Details />
+    <ContactForm />
+    <Footer />
     {/* 
-      <HowWork />
-      <OurServices />
-      <Especialist />
-      <Productivity />
-      <Details />
-      <ContactForm />
-      <Footer /> 
     */}
   </>
 )

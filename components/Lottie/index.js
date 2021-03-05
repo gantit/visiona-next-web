@@ -1,1 +1,1 @@
-export { default } from './CamLottie'
+export { default } from './camLottie'
