@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component, cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import lottie from 'lottie-web'
 
@@ -171,7 +171,7 @@ class Lottie extends Component {
       ...rest
     } = this.props
     const element = <span className={styles.icon} />
-    const cloned = React.cloneElement(children || element, {
+    const cloned = cloneElement(children || element, {
       ref: this.setElement,
       ...rest
     })

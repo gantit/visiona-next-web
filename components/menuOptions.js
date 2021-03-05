@@ -1,6 +1,5 @@
-import React from 'react'
-import { Menu } from 'semantic-ui-react'
 import Link from "next/link"
+import { Menu } from 'semantic-ui-react'
 import { useRouter } from "next/router"
 import { useTranslation } from 'react-i18next'
 

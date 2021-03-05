@@ -1,15 +1,14 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { useTranslation } from 'components/containers/node_modules/react-i18next'
+import Head from "next/head"
+import { useTranslation } from 'react-i18next'
 
-import Download from '../Containers/Download'
-import Footer from '../Containers/Footer'
+import Download from 'components/download'
+import Footer from 'components/footer'
 
 const DownloadPage = () => {
   const { t } = useTranslation()
 
   const Title = () => (
-    <Helmet>
+    <Head>
       <meta charSet="utf-8" />
       <title>{t('Visiona.cat | Descargas')}</title>
       <link rel="canonical" href="https://visiona.cat/download" />
@@ -19,7 +18,7 @@ const DownloadPage = () => {
       <meta property="og:description" content={t('Descargas de visiona.cat')} />
       <meta property="og:url" content="https://visiona.cat/download" />
       <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    </Helmet>
+    </Head>
   )
 
   return (

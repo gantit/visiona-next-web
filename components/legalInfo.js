@@ -1,8 +1,7 @@
-import React from 'react'
 import { Grid, Segment, Header } from 'semantic-ui-react'
 import { Trans } from 'react-i18next'
 
-import './HowWork.module.scss'
+import './howWork.module.scss'
 
 const styles = {
   box: {

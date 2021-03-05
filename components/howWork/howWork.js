@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   List, Grid, Segment, Header, Icon, Image
 } from 'semantic-ui-react'
