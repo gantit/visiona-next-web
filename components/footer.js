@@ -12,7 +12,7 @@ import Link from "next/link"
 import Logo from 'assets/icons/logo'
 
 const Footer = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   return (
     <Segment inverted vertical style={{ padding: '5em 0em' }}>
       <Container>
@@ -40,21 +40,21 @@ const Footer = () => {
             <Grid.Column width={3}>
               <Header inverted as="h4" content={t('Legal')} />
               <List link inverted>
-                <Link href="/legal">
+                <Link href={`/${i18n.language}/legal`}>
                   <a>
                     <List.Item as="span" >{t('Aviso legal')}</List.Item>
                   </a>
                 </Link>
               </List>
               <List link inverted>
-                <Link href="/cookies">
+                <Link href={`/${i18n.language}/cookies`}>
                   <a>
                     <List.Item as="span">{t('Política de Cookies')}</List.Item>
                   </a>
                 </Link>
               </List>
               <List link inverted>
-                <Link href="/privacy">
+                <Link href={`/${i18n.language}/privacy`}>
                   <a>
                     <List.Item as="span" >{t('Política de privacidad')}</List.Item>
                   </a>
@@ -66,7 +66,7 @@ const Footer = () => {
               <p>{t('Copyright 2021 | Todos los derechos reservados.')}</p>
             </Grid.Column>
             <Grid.Column width={3} floated="right">
-              <Link href="/">
+              <Link href={`/${i18n.language}`}>
                 <a>
                   <Logo />
                 </a>

@@ -8,6 +8,7 @@ import {
   Visibility,
   Image
 } from 'semantic-ui-react'
+import { useTranslation } from 'react-i18next'
 
 import MenuOptions from './menuOptions'
 import Header from './header'
@@ -19,6 +20,7 @@ import Logo from 'assets/icons/logo'
 const DesktopContainer = ({ children }) => {
   const { funnel } = useContext(ToastContext)
   const [hideFixedMenu, setHideFixedMenu] = useState(false)
+  const { i18n } = useTranslation()
 
   return (
     <>
@@ -44,7 +46,7 @@ const DesktopContainer = ({ children }) => {
             style={{ borderColor: 'transparent' }}
           >
             <Container>
-              <Link href="/">
+              <Link href={`/${i18n.language}`}>
                 <a> <Logo isWhite={!hideFixedMenu} /> </a>
               </Link>
               <Menu.Item position="right">

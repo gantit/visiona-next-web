@@ -55,7 +55,7 @@ const Header = ({ mobile }) => {
           marginTop: mobile ? '0.5em' : '0.8em'
         }}
       />
-      {router.pathname === '/' && (
+      {router.pathname === '/[lang]' && (
         <Button as="a" href="#ContactForm" style={styles.btn}>
           {t('CONTACTANOS')}
         </Button>
@@ -66,7 +66,7 @@ const Header = ({ mobile }) => {
           margin: '0 auto',
           padding: '20px 0',
           color: 'white',
-          marginTop: router.pathname !== '/' ? '7em' : '0'
+          marginTop: router.pathname !== '/[lang]' ? '7em' : '0'
         }}
         name="angle down"
         size="big"
