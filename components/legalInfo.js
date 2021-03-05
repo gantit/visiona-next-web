@@ -1,8 +1,6 @@
 import { Grid, Segment, Header } from 'semantic-ui-react'
 import { Trans } from 'react-i18next'
 
-import './howWork.module.scss'
-
 const styles = {
   box: {
     padding: '0 4em 4em 4em',
