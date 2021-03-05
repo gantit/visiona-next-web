@@ -1,0 +1,9 @@
+.howWork{
+  transition: color .5s;
+}
+
+@media (min-width: 700px) { 
+  .icon {
+    display: none;
+  }
+}

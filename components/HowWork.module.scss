@@ -1,0 +1,27 @@
+.howWork {
+  transition: color 0.5s;
+  .blue {
+    color: #003c60;
+  }
+
+  .yellow {
+    color: #8a6f43;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+
+  ul li {
+    margin-left: 30px;
+  }
+
+  @media (min-width: 700px) {
+    .icon {
+      display: none;
+    }
+  }
+}
