@@ -11,7 +11,7 @@ const LegalPage = () => {
     <Head>
       <meta charSet="utf-8" />
       <title>{t('Visiona.cat | aviso legal')}</title>
-      <link rel="canonical" href="https://visiona.cat/legal" />
+      <link rel="canonical" href="https://visiona.cat/es/legal" />
       <meta name="description" content={t('aviso legal de visiona.cat')} />
       <meta property="og:site_name" content={t('Visiona Intelligence Security')} />
       <meta property="og:title" content={t('Visiona Intelligence Security')} />

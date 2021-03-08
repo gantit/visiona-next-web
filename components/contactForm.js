@@ -173,7 +173,7 @@ const ContactForm = () => {
             {errorSend && <Message negative>{t('Ha ocurrido un error al Enviar.')}</Message>}
           </Grid.Column>
           <Grid.Column>
-            <Image size="huge" src='/img/photos/contactanos.jpg' />
+            <Image size="huge" src='/img/photos/contactanos-min.jpg' />
           </Grid.Column>
         </Grid.Row>
       </Grid>

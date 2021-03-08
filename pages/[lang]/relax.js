@@ -41,10 +41,11 @@ const CookiesPage = () => {
 
   useEffect(() => {
     setMessage({
-      url: '/img/photos/fog.png',
-      title: t("Sistema de Niebla Antirrobo"),
-      subtitle: null,
+      url: '/img/photos/relaxBanner.jpg',
+      title: t("Preocupate por vivir"),
+      subtitle: t("Nosotros nos encargamos de la seguridad que necesitas"),
       height: 600,
+      postion: 'left 90%'
     })
     return () => {
       setMessage('')
@@ -62,7 +63,7 @@ const CookiesPage = () => {
     const keys =
       "seguridad con niebla, protección contra robos, ladrones, detener a los ladrones, protección de inventarios, seguridad en comercios, previene de saqueos";
 
-    const niebla = "https://visiona.cat/img/photos/equipo-protect-min.png"
+    const niebla = "https://visiona.cat/img/photos/equipo-protect.png"
     return (
       <Head>
         <meta charSet="utf-8" />
@@ -98,7 +99,7 @@ const CookiesPage = () => {
               <Trans i18nKey="generadorNiebla">
                 <Embed
                   id='8y9J1E7LbsI'
-                  placeholder='/img/photos/fog_system_visiona-min.png'
+                  placeholder='/img/photos/fog_system_visiona.png'
                   source='youtube'
                 />
 
@@ -208,7 +209,7 @@ const CookiesPage = () => {
                           bordered
                           rounded
                           size="massive"
-                          src="/img/photos/fog_security-min.png"
+                          src="/img/photos/fog_security.png"
                         />
                       </Grid.Column>
                     </Grid.Row>
@@ -219,6 +220,7 @@ const CookiesPage = () => {
                     </Grid.Row>
                   </Grid>
                 </Segment>
+
                 <ContactForm />
               </Trans>
             </Grid.Column>
