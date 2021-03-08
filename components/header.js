@@ -33,7 +33,7 @@ const Header = ({ mobile }) => {
     >
       <HeaderSR
         as="h1"
-        content={t(funnel?.title || 'instalación de Cámaras y Sistemas de Videovigilancia')}
+        content={t(funnel?.title || 'Instalación Sistemas de Seguridad')}
         inverted
         style={{
           fontSize: mobile ? '2.5em' : '4em',
@@ -44,7 +44,7 @@ const Header = ({ mobile }) => {
       />
       <HeaderSR
         as="h4"
-        content={t(funnel?.subtitle || 'Sistema de seguridad a medida, vigilancia 24 horas')}
+        content={t(funnel?.subtitle || 'A medida y estudio sin coste')}
         inverted
         style={{
           fontSize: mobile ? '1.5em' : '20px',
