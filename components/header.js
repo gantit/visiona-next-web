@@ -59,17 +59,6 @@ const Header = ({ mobile }) => {
           {t('CONTACTANOS')}
         </Button>
       )}
-      <Icon
-        style={{
-          display: 'block',
-          margin: '0 auto',
-          padding: '20px 0',
-          color: 'white',
-          marginTop: router.pathname !== '/[lang]' ? '7em' : '0'
-        }}
-        name="angle down"
-        size="big"
-      />
     </Segment>
   )
 }
