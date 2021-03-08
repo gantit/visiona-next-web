@@ -12,22 +12,41 @@ import Footer from 'components/footer'
 
 
 
-const Title = () => (
-  <Head>
-    <meta name="description"
-      content="Instalación de Cámaras y Sistemas de Videovigilancia en Barcelona y provincia Sistema de seguridad a medida, vigilancia 24 horas Recibe una propuesta a medida y sin compromiso Más de 15" />
-    <meta property="og:site_name" content="Visiona Intelligence Security" />
-    <meta property="og:title" content="Visiona Intelligence Security" />
-    <meta property="og:description"
-      content="Instalación de Cámaras y Sistemas de Videovigilancia en Barcelona y provincia Sistema de seguridad a medida, vigilancia 24 horas Recibe una propuesta a medida y sin compromiso Más de 15" />
-    <meta property="og:image" itemProp="image" content="https://visiona.cat/img/visionalogo.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="300" />
-    <meta property="og:image:height" content="300" />
-    <meta property="og:url" content="https://visiona.cat" />
-  </Head>
-)
+const Title = () => {
+  const description = t(
+    "Instalación de sistemas de Videovigilancia en Barcelona y provincia Sistema de seguridad a medida, vigilancia 24 horas. Recibe una propuesta a medida y sin compromiso Más de 15"
+  );
+  const title = t(
+    "Visiona Intelligence Security"
+  );
+  const url = "https://visiona.cat/es/";
+  const keys =
+    "seguridad integral, protección contra robos, okupas, detener a los ladrones, no saqueos, stop okupas, camaras de video";
+
+  const logo = 'https://visiona.cat/img/visionalogo.png'
+  return (
+    <Head>
+      <meta name="description"
+        content={description} />
+      <link rel="canonical" href={url} />
+      <meta name="keywords" content={keys} />
+      <meta property="og:site_name" content={title} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" itemProp="image" content={logo} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="300" />
+      <meta property="og:image:height" content="300" />
+      <meta property="og:url" content={url} />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:image" content={niebla} />
+    </Head>
+  )
+}
 
 const HomePage = () => (
   <>

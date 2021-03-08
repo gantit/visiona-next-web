@@ -11,13 +11,12 @@ const DownloadPage = () => {
     <Head>
       <meta charSet="utf-8" />
       <title>{t('Visiona.cat | Descargas')}</title>
-      <link rel="canonical" href="https://visiona.cat/download" />
+      <link rel="canonical" href="https://visiona.cat/es/download" />
       <meta name="description" content={t('Descargas de visiona.cat')} />
       <meta property="og:site_name" content={t('Visiona Intelligence Security')} />
       <meta property="og:title" content={t('Visiona Intelligence Security')} />
       <meta property="og:description" content={t('Descargas de visiona.cat')} />
-      <meta property="og:url" content="https://visiona.cat/download" />
-      <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+      <meta property="og:url" content="https://visiona.cat/es/download" />
     </Head>
   )
 

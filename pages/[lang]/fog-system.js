@@ -62,14 +62,14 @@ const CookiesPage = () => {
     const keys =
       "seguridad con niebla, protección contra robos, ladrones, detener a los ladrones, protección de inventarios, seguridad en comercios, previene de saqueos";
 
-    const niebla = "/img/photos/equipo-protect.png"
+    const niebla = "https://visiona.cat/img/photos/equipo-protect.png"
     return (
       <Head>
         <meta charSet="utf-8" />
         <title>{title}</title>
         <link rel="canonical" href={url} />
         <meta name="description" content={description} />
-        <meta name="keywords" content={keys}></meta>
+        <meta name="keywords" content={keys} />
         <meta property="og:description" content={description} />
         <meta property="og:image:height" content="950" />
         <meta property="og:image:width" content="2575" />
