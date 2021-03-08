@@ -1,4 +1,5 @@
 import Head from "next/head"
+import { useTranslation } from "react-i18next";
 
 import BodySection from 'components/body'
 import LopdSection from 'components/lopd'
@@ -13,6 +14,7 @@ import Footer from 'components/footer'
 
 
 const Title = () => {
+  const [t] = useTranslation();
   const description = t(
     "Instalación de sistemas de Videovigilancia en Barcelona y provincia Sistema de seguridad a medida, vigilancia 24 horas. Recibe una propuesta a medida y sin compromiso Más de 15"
   );
@@ -43,7 +45,7 @@ const Title = () => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:image" content={niebla} />
+      <meta name="twitter:image" content={logo} />
     </Head>
   )
 }
