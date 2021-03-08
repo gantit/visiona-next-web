@@ -13,7 +13,7 @@ const MenuOptions = ({ setSidebarOpened }) => {
         active={router.pathname === '/[lang]'}
       >
         <Link href={`/${i18n.language}/`}>
-          <a onClick={() => setSidebarOpened(false)}>
+          <a onClick={() => setSidebarOpened && setSidebarOpened(false)}>
             {t('Video Vigilancia')}
           </a>
         </Link>
@@ -23,7 +23,7 @@ const MenuOptions = ({ setSidebarOpened }) => {
         active={router.pathname === '/[lang]/fog-system'}
       >
         <Link href={`/${i18n.language}/fog-system`}>
-          <a onClick={() => setSidebarOpened(false)}>
+          <a onClick={() => setSidebarOpened && setSidebarOpened(false)}>
             {t('Sistema de Niebla')}
           </a>
         </Link>
@@ -33,7 +33,7 @@ const MenuOptions = ({ setSidebarOpened }) => {
         active={router.pathname === '/[lang]/downloads'}
       >
         <Link href={`/${i18n.language}/downloads`} >
-          <a onClick={() => setSidebarOpened(false)}>
+          <a onClick={() => setSidebarOpened && setSidebarOpened(false)}>
             {t('Descargas')}
           </a>
         </Link>

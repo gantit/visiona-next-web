@@ -58,11 +58,11 @@ const CookiesPage = () => {
     const title = t(
       "Visiona.cat | Niebla antirrobo para la prevención de delitos"
     );
-    const url = "https://visiona.cat/niebla/";
+    const url = "https://visiona.cat/es/fog-system/";
     const keys =
-      "seguridad con humo, protección contra robos, niebla de seguridad, ladrones, detener a los ladrones, protección de inventarios, seguridad en comercios";
+      "seguridad con niebla, protección contra robos, ladrones, detener a los ladrones, protección de inventarios, seguridad en comercios, previene de saqueos";
 
-    const niebla = "/img/photos/visiona_generador_de_niebla.png"
+    const niebla = "/img/photos/equipo-protect.png"
     return (
       <Head>
         <meta charSet="utf-8" />
@@ -79,7 +79,6 @@ const CookiesPage = () => {
         <meta property="og:title" content={title} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content={description} />
