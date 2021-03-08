@@ -40,7 +40,7 @@ const { MediaContextProvider, Media } = createMedia({
 const ResponsiveContainer = ({ children, pathname = "" }) => {
   const [cookies, setCookie] = useCookies(['_legalVisiona', '_cookiesVisiona'])
   const [showConsent, setConsent] = useState(cookies._cookiesVisiona === 'true')
-  const { t } = useTranslation()
+  const [t] = useTranslation()
 
   if (!cookies._legalVisiona) {
     setCookie('_legalVisiona', false, {
@@ -76,26 +76,26 @@ const ResponsiveContainer = ({ children, pathname = "" }) => {
     </>
   )
   return (
-    <MediaContextProvider>
-      <Media greaterThan='mobile'>
-        <Desktop>{children}</Desktop>
-      </Media>
-      <Media at='mobile'>
-        <Sidebar.Pushable>
+    <nav>
+      <MediaContextProvider>
+        <Media greaterThan='mobile'>
+          <Desktop>{children}</Desktop>
+        </Media>
+        <Media at='mobile'>
           <Mobile>{children}</Mobile>
-        </Sidebar.Pushable>
-      </Media>
-      <TransitionablePortal open={!showConsent}>
-        <Message
-          success
-          visible={showConsent}
-          style={styles.container}
-        >
-          <Message.Header> <Icon name='exclamation' /> Política de Cookies</Message.Header>
-          <CookiesComponen />
-        </Message>
-      </TransitionablePortal>
-    </MediaContextProvider>
+        </Media>
+        <TransitionablePortal open={!showConsent}>
+          <Message
+            success
+            visible={showConsent}
+            style={styles.container}
+          >
+            <Message.Header> <Icon name='exclamation' /> Política de Cookies</Message.Header>
+            <CookiesComponen />
+          </Message>
+        </TransitionablePortal>
+      </MediaContextProvider>
+    </nav>
   )
 }
 

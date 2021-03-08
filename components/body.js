@@ -26,7 +26,7 @@ const styles = {
 }
 
 const BodySection = () => {
-  const { t } = useTranslation()
+  const [t] = useTranslation()
   return (
     <Segment style={{ padding: '8em 0em' }} vertical className="BodySection">
       <Grid container stackable verticalAlign="middle">

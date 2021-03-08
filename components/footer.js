@@ -10,9 +10,10 @@ import { useTranslation } from 'react-i18next'
 import Link from "next/link"
 
 import Logo from 'assets/icons/logo'
+import Whatsapp from 'assets/icons/whatsapp'
 
 const Footer = () => {
-  const { t, i18n } = useTranslation()
+  const [t, i18n] = useTranslation()
   return (
     <Segment inverted vertical style={{ padding: '5em 0em' }}>
       <Container>
@@ -27,13 +28,17 @@ const Footer = () => {
                   </strong>
                   : Plaça Can Gassol, 3, 08301, Mataró
                 </List.Item>
-              </List>
-              <List link inverted>
                 <List.Item as="a" href="tel:+34663333662" style={{ textDecoration: 'underline' }}>
                   <strong style={{ color: '#999' }}>
                     {t('Teléfono')}
                   </strong>
                   : 663333662
+                </List.Item>
+                <List.Item as="a" href="https://api.whatsapp.com/send?phone=+34663333662&text=Hola buscamos información" style={{ textDecoration: 'underline' }}>
+                  <strong style={{ color: '#999' }}>
+                    {t('Whatsapp')}
+                  </strong>
+                  : <Whatsapp fill="#fff" width="20px" style={{ marginLeft: '10px' }} />
                 </List.Item>
               </List>
             </Grid.Column>
@@ -67,7 +72,10 @@ const Footer = () => {
             </Grid.Column>
             <Grid.Column width={3} floated="right">
               <Link href={`/${i18n.language}`}>
-                <a>
+                <a style={{
+                  maxWidth: '200px',
+                  display: 'block'
+                }}>
                   <Logo />
                 </a>
               </Link>

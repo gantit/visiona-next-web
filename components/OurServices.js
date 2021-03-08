@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 
 
 const OurServices = () => {
-  const { t } = useTranslation()
+  const [t] = useTranslation()
   return (
     <Segment style={{ padding: '4em 0em' }} className="OurServices" vertical>
       <Grid container stackable verticalAlign="middle" textAlign="center">

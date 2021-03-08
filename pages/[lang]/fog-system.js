@@ -37,7 +37,7 @@ const styles = {
 
 const CookiesPage = () => {
   const { setMessage } = useContext(ToastContext)
-  const { t } = useTranslation();
+  const [t] = useTranslation();
 
   useEffect(() => {
     setMessage({

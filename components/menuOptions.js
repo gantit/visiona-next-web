@@ -3,27 +3,39 @@ import { Menu } from 'semantic-ui-react'
 import { useRouter } from "next/router"
 import { useTranslation } from 'react-i18next'
 
-const MenuOptions = () => {
-  const { t, i18n } = useTranslation()
+const MenuOptions = ({ setSidebarOpened }) => {
+  const [t, i18n] = useTranslation()
   const router = useRouter()
   return (
     <>
       <Menu.Item
-        active={router.pathname === '/[lang]'}>
+        as='p'
+        active={router.pathname === '/[lang]'}
+      >
         <Link href={`/${i18n.language}/`}>
-          <a>{t('Video Vigilancia')}</a>
+          <a onClick={() => setSidebarOpened(false)}>
+            {t('Video Vigilancia')}
+          </a>
         </Link>
       </Menu.Item>
       <Menu.Item
-        active={router.pathname === '/[lang]/fog-system'}>
+        as='p'
+        active={router.pathname === '/[lang]/fog-system'}
+      >
         <Link href={`/${i18n.language}/fog-system`}>
-          <a>{t('Fog System')}</a>
+          <a onClick={() => setSidebarOpened(false)}>
+            {t('Sistema de Niebla')}
+          </a>
         </Link>
       </Menu.Item>
       <Menu.Item
-        active={router.pathname === '/[lang]/downloads'}>
+        as='p'
+        active={router.pathname === '/[lang]/downloads'}
+      >
         <Link href={`/${i18n.language}/downloads`} >
-          {t('Descargas')}
+          <a onClick={() => setSidebarOpened(false)}>
+            {t('Descargas')}
+          </a>
         </Link>
       </Menu.Item>
     </>

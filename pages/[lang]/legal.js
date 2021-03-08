@@ -5,7 +5,7 @@ import Legal from 'components/legalInfo'
 import Footer from 'components/footer'
 
 const LegalPage = () => {
-  const { t } = useTranslation()
+  const [t] = useTranslation()
 
   const Title = () => (
     <Head>

@@ -33,16 +33,14 @@ const HomePage = () => (
   <>
     <Title />
     <BodySection />
-    <LopdSection />
     <HowWork />
     <OurServices />
     <Especialist />
     <Productivity />
     <Details />
+    <LopdSection />
     <ContactForm />
     <Footer />
-    {/* 
-    */}
   </>
 )
 

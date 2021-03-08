@@ -7,7 +7,7 @@ import {
 import { useTranslation } from 'react-i18next'
 
 const Details = () => {
-  const { t } = useTranslation()
+  const [t] = useTranslation()
   return (
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>

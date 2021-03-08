@@ -4,7 +4,8 @@ import {
   Grid, Form, Input,
   TextArea, Button, Header,
   Image, Checkbox, Confirm,
-  Segment, Message, Item
+  Segment, Message, Item,
+  Dimmer, Loader
 } from 'semantic-ui-react'
 import { useCookies } from 'react-cookie'
 import { useTranslation, Trans } from 'react-i18next'
@@ -12,23 +13,10 @@ import { useTranslation, Trans } from 'react-i18next'
 
 const API_URL = 'https://api.visiona.cat'
 
-const sendForm = async (data) => {
-  const url = `${API_URL}/api/contacts/`
 
-  const response = await axios
-    .post(url, data, {
-      mode: 'no-cors',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        'X-API-KEY': '5db3a6280610218a1c0bbfd99f19821e7b0d246d2711c9f0c79c1f17fd46a039'
-      }
-    })
-  return response
-}
 
 const ContactForm = () => {
-  const { t } = useTranslation()
+  const [t] = useTranslation()
   const [cookies, setCookie] = useCookies(['_legalVisiona'])
   const formEmpty = {
     name: '',
@@ -42,7 +30,24 @@ const ContactForm = () => {
   const [isOpenConsent, toggleConsent] = useState(false)
   const [successSend, setSuccessSend] = useState(false)
   const [errorSend, setErrorSend] = useState(false)
+  const [isLoading, setLoading] = useState(false)
   const [, setConsent] = useState(cookies._legalVisiona === 'true')
+
+  const sendForm = async (data) => {
+    const url = `${API_URL}/api/contacts/`
+    setLoading(true)
+
+    const response = await axios
+      .post(url, data, {
+        mode: 'no-cors',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'X-API-KEY': '5db3a6280610218a1c0bbfd99f19821e7b0d246d2711c9f0c79c1f17fd46a039'
+        }
+      })
+    return response
+  }
 
   const submit = async () => {
     const Data = {
@@ -50,15 +55,16 @@ const ContactForm = () => {
       name: `${fields.name} ${fields.surname}`
     }
     try {
-      const response = await sendForm(Data)
+      await sendForm(Data)
       setfields(formEmpty)
       setSuccessSend(true)
-      console.log(response)
       setTimeout(() => setSuccessSend(false), 5000)
     } catch (error) {
       setErrorSend(true)
       setfields(formEmpty)
       setTimeout(() => setErrorSend(false), 5000)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -77,6 +83,9 @@ const ContactForm = () => {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
+            {isLoading && <Dimmer active>
+              <Loader content={t('Enviando')} />
+            </Dimmer>}
             <Form onSubmit={() => submit()}>
               <Form.Group widths="equal">
                 <Form.Field
@@ -121,6 +130,7 @@ const ContactForm = () => {
                 onChange={({ target }) => setfields({ ...fields, message: target.value })}
                 label={t('Detalles')}
                 value={fields.message}
+                required
                 placeholder={t('Cuentanos que tienes pensado, que tipo de sistemas quieres y así tendremos mas datos que poder ayudarte')}
               />
 
@@ -163,7 +173,7 @@ const ContactForm = () => {
             {errorSend && <Message negative>{t('Ha ocurrido un error al Enviar.')}</Message>}
           </Grid.Column>
           <Grid.Column>
-            <Image size="huge" src='/img/photos/contactanos.png' />
+            <Image size="huge" src='/img/photos/contactanos.jpg' />
           </Grid.Column>
         </Grid.Row>
       </Grid>

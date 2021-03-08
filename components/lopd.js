@@ -44,7 +44,7 @@ const styles = {
 }
 
 const LopdSection = () => {
-  const { t } = useTranslation()
+  const [t] = useTranslation()
   return (
     <Segment vertical className="LopdSection" style={{ padding: '0 0 2em 0', backgroundColor: '#383838' }}>
       <Grid container stackable verticalAlign="middle">

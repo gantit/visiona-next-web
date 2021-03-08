@@ -20,7 +20,7 @@ import Logo from 'assets/icons/logo'
 const DesktopContainer = ({ children }) => {
   const { funnel } = useContext(ToastContext)
   const [hideFixedMenu, setHideFixedMenu] = useState(false)
-  const { i18n } = useTranslation()
+  const [_, i18n] = useTranslation()
 
   return (
     <>
@@ -46,9 +46,11 @@ const DesktopContainer = ({ children }) => {
             style={{ borderColor: 'transparent' }}
           >
             <Container>
-              <Link href={`/${i18n.language}`}>
-                <a> <Logo isWhite={!hideFixedMenu} /> </a>
-              </Link>
+              <Menu.Item>
+                <Link href={`/${i18n.language}`}>
+                  <a> <Logo isWhite={!hideFixedMenu} /> </a>
+                </Link>
+              </Menu.Item>
               <Menu.Item position="right">
                 <MenuOptions />
               </Menu.Item>

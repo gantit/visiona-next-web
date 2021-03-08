@@ -24,7 +24,7 @@ const styles = {
 const Header = ({ mobile }) => {
   const { funnel } = useContext(ToastContext)
   const router = useRouter()
-  const { t } = useTranslation()
+  const [t] = useTranslation()
   return (
     <Segment
       textAlign="center"
@@ -49,7 +49,6 @@ const Header = ({ mobile }) => {
         style={{
           fontSize: mobile ? '1.5em' : '20px',
           fontWeight: '600',
-          color: mobile ? 'black' : null,
           width: mobile ? '300px' : null,
           margin: 'auto',
           marginTop: mobile ? '0.5em' : '0.8em'

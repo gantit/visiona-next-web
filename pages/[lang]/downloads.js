@@ -5,7 +5,7 @@ import Download from 'components/download'
 import Footer from 'components/footer'
 
 const DownloadPage = () => {
-  const { t } = useTranslation()
+  const [t] = useTranslation()
 
   const Title = () => (
     <Head>

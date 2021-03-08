@@ -47,7 +47,6 @@ i18n
         sourceType: 'module' // defaults to 'module'
       }
     },
-
     // have a common namespace used around the full app
     ns: ['translations'],
     defaultNS: 'translations',
@@ -63,7 +62,7 @@ i18n
     },
 
     react: {
-      wait: true
+      useSuspense: false
     }
   })
 

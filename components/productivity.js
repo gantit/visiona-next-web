@@ -6,7 +6,7 @@ import {
 import { useTranslation } from 'react-i18next'
 
 const Productivity = () => {
-  const { t } = useTranslation()
+  const [t] = useTranslation()
   return (
     <Segment style={{ padding: '0em' }} vertical>
       <Grid celled="internally" columns="equal" stackable>

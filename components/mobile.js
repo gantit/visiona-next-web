@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Link from "next/link"
 import {
   Container,
@@ -7,12 +7,16 @@ import {
   Segment,
   Sidebar
 } from 'semantic-ui-react'
+import { useTranslation } from 'react-i18next'
 
 import MenuOptions from './menuOptions'
 import Header from './header'
+import { ToastContext } from "context"
 import Logo from 'assets/icons/logo'
 
 const MobileContainer = ({ children }) => {
+  const { funnel } = useContext(ToastContext)
+  const [_, i18n] = useTranslation()
   const [sidebarOpened, setSidebarOpened] = useState(false)
 
   return (
@@ -27,7 +31,7 @@ const MobileContainer = ({ children }) => {
         vertical
         visible={sidebarOpened}
       >
-        <MenuOptions />
+        <MenuOptions setSidebarOpened={setSidebarOpened} />
       </Sidebar>
 
       <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -35,20 +39,17 @@ const MobileContainer = ({ children }) => {
           inverted
           textAlign="center"
           style={{
-            minHeight: 350,
-            padding: '1em 0em 2em',
-            backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 15%, rgba(255,255,255,1) 90%)',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'left top'
+            minHeight: funnel?.height || '400px', padding: '1em 0em 2em', backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${funnel?.url || "/img/photos/visionaCat_bg1.jpg"})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'left top'
           }}
           vertical
         >
           <Container>
             <Menu inverted pointing secondary size="large">
-              <Menu.Item>
-                <Link href="/">
-                  <Logo />
+              <Menu.Item style={{
+                maxWidth: '200px',
+              }}>
+                <Link href={`/${i18n.language}`}>
+                  <a><Logo /></a>
                 </Link>
               </Menu.Item>
               <Menu.Item onClick={() => setSidebarOpened(true)} position="right">
