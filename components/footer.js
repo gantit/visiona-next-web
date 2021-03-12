@@ -68,7 +68,7 @@ const Footer = () => {
             </Grid.Column>
             <Grid.Column width={3}>
               <Header as="h4" inverted> Visiona.cat  </Header>
-              <p>{t('Copyright 2021 | Todos los derechos reservados.')}</p>
+              <p>{t(`Copyright ${new Date().getFullYear()} | Todos los derechos reservados.`)}</p>
             </Grid.Column>
             <Grid.Column width={3} floated="right">
               <Link href={`/${i18n.language}`}>

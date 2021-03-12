@@ -33,6 +33,10 @@ const styles = {
     padding: "0.5em 0",
     margin: 0,
   },
+  camera: {
+    width: "100%",
+    height: "400px",
+  }
 };
 
 const CookiesPage = () => {
@@ -85,6 +89,7 @@ const CookiesPage = () => {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:image" content={niebla} />
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
       </Head>
     );
   };
@@ -97,11 +102,7 @@ const CookiesPage = () => {
           <Grid.Row columns="equal">
             <Grid.Column width={16} style={styles.legalText}>
               <Trans i18nKey="generadorNiebla">
-                <Embed
-                  id='8y9J1E7LbsI'
-                  placeholder='/img/photos/fog_system_visiona.png'
-                  source='youtube'
-                />
+                <model-viewer style={styles.camera} src="/glbs/PTZ_Dahua_FULL.glb" alt="A 3D model of a PTZ Dahua" camera-controls />
 
                 <p style={{ fontSize: "1.2em", marginTop: '2rem' }}>
                   Conocemos la forma en la que actúan los delincuentes profesionales, diariamente estamos en la constante búsqueda e investigación de soluciones de última generación que nos permitan prevenir y frustrar sus planes delictivos.</p>
