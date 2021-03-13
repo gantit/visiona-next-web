@@ -34,8 +34,8 @@ const styles = {
     margin: 0,
   },
   camera: {
-    width: "100%",
     height: "400px",
+    margin: "0 auto",
   }
 };
 
