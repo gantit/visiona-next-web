@@ -65,6 +65,14 @@ const Footer = () => {
                   </a>
                 </Link>
               </List>
+              <List link inverted>
+                <Link href={`/${i18n.language}/downloads`} >
+                  <a>
+                    <List.Item as="span" >{t('Descargas')}</List.Item>
+                  </a>
+                </Link>
+              </List>
+
             </Grid.Column>
             <Grid.Column width={3}>
               <Header as="h4" inverted> Visiona.cat  </Header>
@@ -83,7 +91,7 @@ const Footer = () => {
           </Grid.Row>
         </Grid>
       </Container>
-    </Segment>
+    </Segment >
   )
 }
 

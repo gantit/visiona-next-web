@@ -30,11 +30,12 @@ const MenuOptions = ({ setSidebarOpened }) => {
       </Menu.Item>
       <Menu.Item
         as='p'
-        active={router.pathname === '/[lang]/downloads'}
+        active={router.pathname === '/[lang]/products'}
       >
-        <Link href={`/${i18n.language}/downloads`} >
+
+        <Link href={`/${i18n.language}/products`}>
           <a onClick={() => setSidebarOpened && setSidebarOpened(false)}>
-            {t('Descargas')}
+            {t('Productos')}
           </a>
         </Link>
       </Menu.Item>
