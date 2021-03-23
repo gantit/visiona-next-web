@@ -1,0 +1,36 @@
+.container {
+  background-color: #ddd;
+  padding: 5rem;
+
+  .maxWidth {
+    max-width: 1200px;
+    align-items: initial;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .detail {
+    font-size: 18px;
+    h3 {
+      font-size: 32px;
+    }
+    ul {
+      margin-top: 3rem;
+    }
+    li {
+      display: flex;
+      margin: 1rem 0;
+      svg {
+        width: 20px;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .images {
+    margin: 0 2rem;
+    img {
+      max-width: 600px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem;
+  .video {
+    max-width: 500px;
+    margin: 0 3rem;
+    video {
+      width: 100%;
+    }
+  }
+  .description {
+    h4 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
