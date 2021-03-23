@@ -14,3 +14,16 @@
   margin: 0 auto;
   width: fit-content;
 }
+
+@media screen and (max-width: 1024px) {
+  .widgets {
+    max-width: 680px;
+    flex-flow: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .widgets {
+    flex-flow: column wrap;
+  }
+}

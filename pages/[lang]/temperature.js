@@ -8,7 +8,6 @@ import HowWorkWidget from "components/howWorkWidget";
 import TitleText from "components/titleText";
 import TemperatureDetail from "components/temperatureDetail";
 import VideoDemo from "components/videoDemo";
-
 import ContactForm from 'components/contactForm'
 
 const DownloadPage = () => {
