@@ -41,18 +41,13 @@
     }
     .detail {
       margin-top: 2rem;
-    }
-    .images {
-      margin: 0 auto;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .detail {
       font-size: 1.2rem;
       h3 {
         font-size: 2rem;
       }
+    }
+    .images {
+      margin: 0 auto;
     }
   }
 }
