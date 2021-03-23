@@ -12,16 +12,24 @@
   .detail {
     font-size: 1.8rem;
     h3 {
-      font-size: 3.2rem;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.2rem;
     }
     ul {
       margin-top: 3rem;
+      padding: 0;
     }
     li {
       display: flex;
+      align-items: center;
       margin: 1rem 0;
+      font-size: 1.2rem;
+      list-style-type: none;
       svg {
-        width: 2rem;
+        width: 1.6rem;
+        height: 1.6rem;
         margin: 0 5px;
       }
     }

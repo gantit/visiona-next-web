@@ -8,6 +8,7 @@ import 'utils/i18n';
 
 import { pageview } from "utils/analyticsTracker";
 import 'semantic-ui-css/semantic.min.css'
+import 'styles/globals.css'
 
 const App = function ({ Component, pageProps }) {
   i18next.changeLanguage(pageProps.language);
