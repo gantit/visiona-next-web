@@ -39,6 +39,17 @@ const MenuOptions = ({ setSidebarOpened }) => {
           </a>
         </Link>
       </Menu.Item>
+      <Menu.Item
+        as='p'
+        active={router.pathname === '/[lang]/temperature'}
+      >
+
+        <Link href={`/${i18n.language}/temperature`}>
+          <a onClick={() => setSidebarOpened && setSidebarOpened(false)}>
+            {t('Medición analítica')}
+          </a>
+        </Link>
+      </Menu.Item>
     </>
   )
 }
