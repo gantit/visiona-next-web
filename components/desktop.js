@@ -33,7 +33,7 @@ const DesktopContainer = ({ children }) => {
           inverted
           textAlign="center"
           style={{
-            minHeight: funnel?.height || 500, padding: '1em 0em 2em', backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${funnel?.url || "/img/photos/visionaCat_bg1.jpg"})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: funnel?.postion || 'left 20%'
+            minHeight: funnel?.height || 200, padding: '1em 0em 2em', backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${funnel?.url || "/img/photos/CamBanner.webp"})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: funnel?.postion || 'left 20%'
           }}
           vertical
         >
